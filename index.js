@@ -7,15 +7,15 @@ const onNumberPressed = num => {
   document.querySelector("#result").innerHTML = number;
 };
 
-const ops = type => {
+let ops = type => {
   secondNumber = number;
   number = "";
-  ops = type;
+  operator = type;
 };
 
-const numberValue = () => {
-  let viewValue = document.getElementById("viewer");
-  document.querySelector("").innerHTML = "";
+const equals = () => {
+  let viewValue = document.querySelector("#result");
+  document.querySelector("#ops").innerHTML = "";
 
   let total = 0;
 
@@ -36,7 +36,6 @@ const numberValue = () => {
       total = firstNumber - secNumber;
       break;
     default:
-      break;
   }
 
   result.innerHTML = total;
