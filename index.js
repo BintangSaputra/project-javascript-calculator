@@ -38,6 +38,8 @@ const equals = () => {
     default:
   }
 
+  secondNumber = total;
+
   viewValue.innerHTML = total;
 };
 
