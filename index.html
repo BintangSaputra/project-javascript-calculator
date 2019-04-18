@@ -10,7 +10,7 @@
     <h1>JavaScript Calculator</h1>
 
     <div id="calculator" class="calculator">
-      <button id="clear" class="clear">C</button>
+      <button onclick="allClear()">C</button>
 
       <form id="result" class="viewer">
         <input id="inputNumber" type="text" />
@@ -24,17 +24,17 @@
       <button class="num" onclick="onNumberPressed(4)">4</button>
       <button class="num" onclick="onNumberPressed(5)">5</button>
       <button class="num" onclick="onNumberPressed(6)">6</button>
-      <button data-ops="minus" class="ops">-</button>
+      <button onclick="ops('substract')">-</button>
 
       <button class="num" onclick="onNumberPressed(1)">1</button>
       <button class="num" onclick="onNumberPressed(2)">2</button>
       <button class="num" onclick="onNumberPressed(3)">3</button>
-      <button data-ops="times" class="ops">*</button>
+      <button onclick="ops('multiply')">*</button>
 
       <button class="num" onclick="onNumberPressed(0)">0</button>
       <button class="num" data-num=".">.</button>
-      <button id="equals" onclick="equals">=</button>
-      <button data-ops="divided by" class="ops">/</button>
+      <button id="equals" onclick="equals()">=</button>
+      <button onclick="ops('divide')">/</button>
     </div>
 
     <button id="reset" class="reset">Reset</button>

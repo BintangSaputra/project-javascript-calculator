@@ -15,7 +15,7 @@ let ops = type => {
 
 const equals = () => {
   let viewValue = document.querySelector("#result");
-  document.querySelector("#ops").innerHTML = "";
+  // document.querySelector("#ops").innerHTML = "";
 
   let total = 0;
 
@@ -27,7 +27,7 @@ const equals = () => {
       total = firstNumber * secNumber;
       break;
     case "divide":
-      total = firstNumber / secNumber;
+      total = secNumber / firstNumber;
       break;
     case "add":
       total = firstNumber + secNumber;
@@ -38,5 +38,12 @@ const equals = () => {
     default:
   }
 
-  result.innerHTML = total;
+  viewValue.innerHTML = total;
+};
+
+const allClear = () => {
+  document.querySelector("#result").innerHTML = "0";
+  operator = "";
+  number = "";
+  secondNumber = "";
 };
