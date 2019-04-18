@@ -1,16 +1,19 @@
-let result = result => {
-  if (result.charAt(0) === "#") {
-    return document.querySelector(result);
-  }
+let number = "";
+let secondNumber = "";
+let operator = "";
 
-  return document.querySelector(result);
+const num = num => {
+  number += num;
+  document.querySelector("#result").innerHTML = number;
 };
 
-let viewer = result("#viewer"),
-  equals = result("#equals"),
-  num = result(".num"),
-  ops = result(".ops"),
-  theNum = "",
-  oldNum = "",
-  resultNum,
-  operator;
+const ops = type => {
+  secondNumber = number;
+  number = "";
+  ops = type;
+};
+
+const numberValue = () => {
+  let viewValue = document.getElementById("viewer");
+  document.querySelector("").innerHTML = "";
+};
