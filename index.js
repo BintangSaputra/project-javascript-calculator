@@ -47,3 +47,5 @@ const allClear = () => {
   number = "";
   secondNumber = "";
 };
+
+// this code is inspired by raga subekti
