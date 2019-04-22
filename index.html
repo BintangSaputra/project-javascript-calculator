@@ -4,37 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <title>Document</title>
   </head>
   <body>
     <h1>JavaScript Calculator</h1>
 
     <div id="calculator" class="calculator">
-      <button onclick="allClear()">C</button>
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <button onclick="allClear()">C</button>
 
-      <form id="result" class="viewer">
-        <input id="inputNumber" type="text" />
-      </form>
+            <form id="result" class="viewer">
+              <input id="inputNumber" type="text" />
+            </form>
+          </div>
 
-      <button class="num" onclick="onNumberPressed(7)">7</button>
-      <button class="num" onclick="onNumberPressed(8)">8</button>
-      <button class="num" onclick="onNumberPressed(9)">9</button>
-      <button onclick="ops('add')">+</button>
+          <div class="w-100"></div>
 
-      <button class="num" onclick="onNumberPressed(4)">4</button>
-      <button class="num" onclick="onNumberPressed(5)">5</button>
-      <button class="num" onclick="onNumberPressed(6)">6</button>
-      <button onclick="ops('substract')">-</button>
+          <div class="body-cal-1">
+            <button class="num" onclick="onNumberPressed(7)">7</button>
+            <button class="num" onclick="onNumberPressed(8)">8</button>
+            <button class="num" onclick="onNumberPressed(9)">9</button>
+            <button onclick="ops('add')">+</button>
+          </div>
 
-      <button class="num" onclick="onNumberPressed(1)">1</button>
-      <button class="num" onclick="onNumberPressed(2)">2</button>
-      <button class="num" onclick="onNumberPressed(3)">3</button>
-      <button onclick="ops('multiply')">*</button>
+          <div class="w-100"></div>
 
-      <button class="num" onclick="onNumberPressed(0)">0</button>
-      <button class="num" data-num=".">.</button>
-      <button id="equals" onclick="equals()">=</button>
-      <button onclick="ops('divide')">/</button>
+          <div>
+            <button class="num" onclick="onNumberPressed(4)">4</button>
+            <button class="num" onclick="onNumberPressed(5)">5</button>
+            <button class="num" onclick="onNumberPressed(6)">6</button>
+            <button onclick="ops('substract')">-</button>
+          </div>
+
+          <div>
+            <button class="num" onclick="onNumberPressed(1)">1</button>
+            <button class="num" onclick="onNumberPressed(2)">2</button>
+            <button class="num" onclick="onNumberPressed(3)">3</button>
+            <button onclick="ops('multiply')">*</button>
+          </div>
+
+          <div>
+            <button class="num" onclick="onNumberPressed(0)">0</button>
+            <button class="num" data-num=".">.</button>
+            <button id="equals" onclick="equals()">=</button>
+            <button onclick="ops('divide')">/</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <button id="reset" class="reset">Reset</button>
